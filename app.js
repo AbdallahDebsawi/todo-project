@@ -20,3 +20,42 @@ if (age <= 0) {
         }
     }
 }
+/* lab06 */
+
+function askQuestion(question) {
+    let answer = prompt(question + " (Yes/No)").trim().toLowerCase();
+    if (answer === "" || (answer !== "yes" && answer !== "no")) {
+        return "invalid";
+    }
+    return answer;
+}
+
+function gatherResponses() {
+    let responses = [];
+    let questions = [
+        "Are you ready to do your tasks?",
+        "Do you enjoy our website?",
+        "Any recommendations?"
+    ];
+
+    questions.forEach(question => {
+        let response = askQuestion(question);
+        responses.push(response);
+    });
+
+    return responses;
+}
+
+function printResponses(responses) {
+    console.log("User Responses:");
+    responses.forEach((response, index) => {
+        console.log("Question " + (index + 1) + ": " + response);
+    });
+}
+
+function main() {
+    let userResponses = gatherResponses();
+    printResponses(userResponses);
+}
+
+main();
