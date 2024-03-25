@@ -48,6 +48,7 @@ function gatherResponses() {
 
 function printResponses(responses) {
     console.log("User Responses:");
+    // console.log(responses);
     responses.forEach((response, index) => {
         console.log("Question " + (index + 1) + ": " + response);
     });
@@ -59,3 +60,26 @@ function main() {
 }
 
 main();
+
+//shortest solution
+
+// function askQuestion() {
+//     let responses = [];
+//     let questions = [
+//         "Are you ready to do your tasks?",
+//         "Do you enjoy our website?",
+//         "Any recommendations?"
+//     ];
+
+//     questions.forEach(question => {
+//         let response = prompt(question + " (Yes/No)").trim().toLowerCase();
+//         if (response === "" || (response !== "yes" && response !== "no")) {
+//             response = "invalid";
+//         }
+//         responses.push(response);
+//     });
+
+//     console.log(responses);
+
+// }
+// askQuestion();
